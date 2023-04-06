@@ -171,6 +171,8 @@ public class WeatherSceneController : MonoBehaviour
 
 	public void DoWeatherInfoRequest()
 	{
+		cityNameTxt.text = "Loading...";
+
 		WeatherAPICommunication.Instance.GetWeatherInfo(cities[selectedCityIndex].Id.ToString(), OnSuccess, OnError);
 	}
 
@@ -222,6 +224,8 @@ public class WeatherSceneController : MonoBehaviour
 
 	public void OnError(OperationResult operationResult)
 	{
+		cityNameTxt.text = "Error!";
+
 		StartCoroutine(SetupAnimations(false, false, false));
 		errorTxt.gameObject.SetActive(true);
 		errorTxt.text = $"{operationResult.ErrorMessage} while trying to get informations from {cities[selectedCityIndex].Name}";
