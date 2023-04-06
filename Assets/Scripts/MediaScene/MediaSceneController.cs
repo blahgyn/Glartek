@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using TMPro;
 
 public class MediaSceneController : MonoBehaviour
 {
@@ -15,9 +16,11 @@ public class MediaSceneController : MonoBehaviour
 	[SerializeField] Image videoFader;
 	[SerializeField] Image videoLoadingSymbol;
 	[SerializeField] Image videoErrorSymbol;
+	[SerializeField] TextMeshProUGUI videoErrorTxt;
 	[SerializeField] Image imageFader;
 	[SerializeField] Image imageLoadingSymbol;
 	[SerializeField] Image imageErrorSymbol;
+	[SerializeField] TextMeshProUGUI imageErrorTxt;
 
 	[Header("Controllers")]
 	[SerializeField] VideoPlayerController videoPlayerController;
@@ -101,6 +104,7 @@ public class MediaSceneController : MonoBehaviour
 		}
 		else {
 			videoErrorSymbol.gameObject.SetActive(true);
+			videoErrorTxt.text = operationResult.ErrorMessage;
 		}
 	}
 
@@ -113,6 +117,7 @@ public class MediaSceneController : MonoBehaviour
 		}
 		else {
 			imageErrorSymbol.gameObject.SetActive(true);
+			imageErrorTxt.text = operationResult.ErrorMessage;
 		}
 	}
 
