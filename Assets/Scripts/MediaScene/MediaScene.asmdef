@@ -1,0 +1,17 @@
+{
+    "name": "MediaScene",
+    "rootNamespace": "",
+    "references": [
+        "GUID:e79f4c1ed4128674692a6e5bcbe149b0",
+        "GUID:507285a7c2d2a4b4286963a4a3cbc6f1"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

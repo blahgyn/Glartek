@@ -1,0 +1,24 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!/Assets/
+!/Assets/**
+!/ProjectSettings/
+!/ProjectSettings/**
+!/Packages/
+!/Packages/**
+!build_all.py
+
+Thumbs.db
+Thumbs.db.meta
+.DS_Store
+UnityVS/
+UnityVS*
+VSCode/
+VSCode*
+JetBrains/
+JetBrains*
+Seek Persistent Data.asset*
+/ProjectSettings/MaintainerSettings.asset
